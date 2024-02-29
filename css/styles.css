@@ -1,0 +1,101 @@
+:root {
+  --header-height: 120px;
+  --footer-height: 120px;
+}
+
+html {
+  font-family: "DIN Alternate", sans-serif; !important;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: #f2f2f2;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+main {
+  overflow: scroll;
+  height: calc(100% - var(--header-height) - var(--footer-height));
+  margin-top: var(--header-height);
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
+  background-color: #f2f2f2;
+}
+
+footer div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer div img {
+  height: 100%;
+  width: auto;
+}
+
+footer div img:hover {
+  cursor: pointer;
+}
+
+.nav-button {
+  margin: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-img {
+  background-image: url("../images/home.png");
+}
+.home-img.active {
+  background-image: url("../images/home_filled.png");
+}
+
+.bookmark-img {
+  background-image: url("../images/bookmark.png");
+}
+.bookmark-img.active {
+  background-image: url("../images/bookmark_filled.png");
+}
+
+.add-img {
+  background-image: url("../images/add.png");
+}
+.add-img.active {
+  background-image: url("../images/add_filled.png");
+}
+
+.profile-img {
+  background-image: url("../images/profile.png");
+}
+.profile-img.active {
+  background-image: url("../images/profile_filled.png");
+}
+
+iframe {
+  transition: opacity 0.2s ease-in-out;
+
+  opacity: 1;
+}
+
+iframe.loading {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}

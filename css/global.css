@@ -1,0 +1,95 @@
+html {
+  font-family: "DIN Alternate", sans-serif; !important;
+}
+
+body,
+div,
+textarea,
+input,
+span,
+iframe {
+  margin: 0; !important;
+  padding: 0; !important;
+  border: 0; !important;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.bookmark-img {
+  position: absolute;
+  right: 50px;
+  height: auto;
+  top: -15px;
+  width: 20px;
+}
+
+.bookmark-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/bookmark.png");
+}
+.bookmark-img.active {
+  background-image: url("../images/bookmark_filled.png");
+}
+
+.quiz-card {
+  position: relative;
+  margin: 20px;
+  background: lightgrey;
+  border: 7px black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  text-align: center;
+  height: auto;
+}
+
+.quiz-card div {
+  padding: 20px !important;
+
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/*question*/
+.quiz-card p:nth-child(1) {
+  width: 500px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/*button*/
+.quiz-card div:nth-child(2) {
+  display: flex;
+  font-size: 2.5rem;
+}
+.quiz-card button:hover {
+  cursor: pointer;
+}
+.quiz-card button {
+  width: 220px;
+  height: 70px;
+  font-size: 1.8rem;
+  border-radius: 10px;
+}
+
+/*tags*/
+.quiz-card div:nth-child(4) {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+}
+
+div span {
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}

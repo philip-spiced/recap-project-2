@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Turbo quiz app</title>
+    <meta charset="UTF-8" />
+    <link href="../../css/tailwind.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/global.css" rel="stylesheet" type="text/css" />
+    <script defer src="../../js/common.js"></script>
+    <script defer src="add.js"></script>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
+
+      input,
+      textarea {
+        font-size: 1.1rem;
+      }
+      #qsAndAsForm {
+        width: 100%;
+        height: 100%;
+      }
+
+      #qsAndAsForm label {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      #qsAndAsForm textarea {
+        resize: none;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px !important;
+        margin: 10px;
+      }
+      #qsAndAsForm button {
+        margin-top: 40px;
+        padding: 10px 20px;
+        background-color: rgba(0, 128, 0, 0.7);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 15px;
+      }
+      #qsAndAsForm button:hover {
+        background-color: #64e864;
+      }
+      .counter {
+        width: min-content;
+        white-space: nowrap;
+        margin-right: 10px;
+        right: 0;
+        bottom: 0;
+      }
+
+      .tags,
+      .bookmark {
+        margin-top: 20px;
+      }
+
+      .tags input {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px !important;
+        margin: 10px;
+      }
+
+      .bookmark input[type="checkbox"] {
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="qsAndAsForm">
+      <div class="flex flex-col">
+        <label for="question">Your question:</label>
+        <textarea
+          id="question"
+          name="question"
+          maxlength="150"
+          cols="33"
+          rows="4"
+          placeholder="Type question"
+          data-js="question"
+        ></textarea>
+        <div class="w-full flex flex-end">
+          <div id="questionCounter" class="counter">150 characters remaining</div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label for="answer">Your answer:</label>
+        <textarea
+          id="answer"
+          name="answer"
+          maxlength="150"
+          cols="33"
+          rows="4"
+          placeholder="Type answer..."
+          data-js="answer"
+        ></textarea>
+        <div class="w-full flex flex-end">
+          <div id="answerCounter" class="counter">150 characters remaining</div>
+        </div>
+      </div>
+      <div class="flex flex-col tags">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" name="tags" maxlength="150" placeholder="Type tags..." data-js="questionCounter" />
+      </div>
+      <div class="flex bookmark">
+        <label for="isBookmarked">Bookmark?</label>
+        <input type="checkbox" id="isBookmarked" name="isBookmarked" data-js="answerCounter" />
+      </div>
+      <div class="flex flex-col">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
